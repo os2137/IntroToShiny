@@ -21,6 +21,7 @@ ui <- fluidPage(
 server <-   function(input, output){
   
   data <- reactive({rnorm(input$num)})
+  
   output$hist <- renderPlot({
     input$num
     hist(data())
